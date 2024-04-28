@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-LightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    background-color:var(--Very-LightGray );
+    font-family: "Poppins", sans-serif;
+}
+
+main{
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:767px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        column-gap: 0;
+        padding: 40px;
+    }
+}
+
+main .top  {
+    width: 100%;
+    text-align: center;
+}
+
+main .top p:first-child {
+    color: var(--Grayish-Blue);
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+main .top > h1 {
+    font-size: 2.5em;
+    font-weight:600;
+}
+
+main .top > p:last-child {
+    width: 500px;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--Grayish-Blue);
+}
+
+@media (max-width:767px) {
+    main .top > p:last-child {
+        width: 100%;
+    }
+    main .top p:first-child {
+        font-size: 1.4em;
+    }
+    main .top > h1 {
+        font-size: 1.4em;
+    }
+}
+
+main  .box {
+    background-color: #ffff;
+    padding: 30px;
+    border-top:4px solid ;
+    margin-bottom: 10px;
+    width: 375px;
+    border-radius: 6px;
+}
+
+
+main .box > h2 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+main  .box > span {
+    display: block;
+    width:300px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--Grayish-Blue);
+}
+
+main  .box > div:last-of-type {
+    margin-left: auto;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+main > .box:nth-child(2) {
+    border-color: var(--Cyan);
+}
+
+
+main > .box:last-child {
+    border-color: var(--Blue);
+}
+
+section .box:first-child {
+    border-color: var(--Red);
+    margin-bottom: 40px;
+}
+
+section .box:last-child {
+    border-color: var(--Orange);
+}
+
+
+@media (max-width:767px) {
+    main  .box {
+        width: 100%;
+    }
+    main section .box {
+        width: 310px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
